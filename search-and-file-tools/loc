@@ -5,7 +5,7 @@ if [ "$#" -ne 2 ]; then
     echo "Usage: $0 <directory> <search_term>"
     exit 1
 fi
-echo '314674' | sudo -S updatedb  && sudo updatedb -o /var/lib/plocate/plocate.db
+# echo '314674' | sudo -S updatedb  && sudo updatedb -o /var/lib/plocate/plocate.db
 
 # Extract arguments
 directory=$1
@@ -32,7 +32,7 @@ directory=$(cd "$directory" && pwd)
 directory=${directory%/}
 
 # Construct the locate command
-locate_command="plocate -r '^$directory/.*$search_term.*$' | grep -vE '/(\.git|trash|Trash|.cache|tmp)/'"
+locate_command="plocate -r '^$directory/.*$search_term.*$' | grep -vE '/(\.git|trash|Trash|tmp)/'"
 echo "Running command: $locate_command"
 echo ""
 

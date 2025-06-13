@@ -9,11 +9,20 @@ fi
 # YouTube URL
 URL=$1
 
-# Output filename
-OUTPUT="file.mp4"
+# Get video title using yt-dlp
+TITLE=$(yt-dlp --get-title "$URL" 2>/dev/null | head -n 1)
+CLEAN_TITLE=$(echo "$TITLE" | tr -d '|?<>!·' | tr ' ' '_')
 
-# Download the video
-echo "Downloading video..."
+if [ -z "$TITLE" ]; then
+    echo "Failed to retrieve video title."
+    exit 1
+fi
+
+echo "Downloading title for filename: $CLEAN_TITLE"
+
+# Output filename
+OUTPUT="${CLEAN_TITLE}.mp4"
+
 yt-dlp "$URL" -o "$OUTPUT" --merge-output-format mp4
 
 # Check if download was successful
@@ -21,9 +30,3 @@ if [ $? -ne 0 ]; then
     echo "Error downloading the video."
     exit 1
 fi
-
-# Run whisper on the downloaded file
-echo "Running whisper on $OUTPUT..."
-whis "$OUTPUT"
-
-echo "Process completed."

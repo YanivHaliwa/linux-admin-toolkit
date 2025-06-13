@@ -56,7 +56,8 @@ The files linux_packs_needed.txt and pip_needed.txt contain lists of pip or apt 
 - **vidsubs**: Matches video files with their corresponding subtitle files and renames them for consistency.
 - **whis**: Transcribes audio files using OpenAI's Whisper model with optional GPT enhancement.
 - **whisi**: Transcribes audio using various Whisper models, including Ivrit-AI and faster-whisper versions.
-- **ytsub**: Downloads a YouTube video and transcribes it (using script: whis).
+- **vidl**: Downloads any video from website.
+- **vidlsub**: Downloads any video from website and transcribes it (using script: whis).
 
 ## System Management Scripts
 - **active**: Checks if a specified process is running.
