@@ -1,4 +1,3 @@
-
 # System Management and Utilities Linux
 
 Welcome to my collection of simple yet powerful Linux tools! These are just everyday scripts and commands I've put together to make life easier when working with Linux. Whether you're managing your system, handling files, or doing some network stuff, you'll find something here to save you time and effort.
@@ -8,12 +7,13 @@ Think of these as your handy toolbox for common Linux tasks. They're not fancy â
 The files linux_packs_needed.txt and pip_needed.txt contain lists of pip or apt packages needed for some files to work.
 
 ## Battery Management
+
 - **batcon**: Analyzes battery discharge patterns and estimates remaining battery time.
 - **batlow**: Monitors battery level and sends notifications for low battery or full charge.
 - **batstat**: Logs battery state changes (charging/discharging) with timestamps.
 
-
 ## Info
+
 - **aptsi**: Search installed packages, optionally filter for manually installed ones.
 - **bati**: Display binary file contents using bat.
 - **cati**: Display binary file contents using cat.
@@ -24,6 +24,7 @@ The files linux_packs_needed.txt and pip_needed.txt contain lists of pip or apt 
 - **sysinfo**: Show system information (hostname, ID, version, etc.).
 
 ## Package Management
+
 - **aptf**: Installs packages listed in a specified file.
 - **getpiplist**: Generates a clean list of installed pip packages, saving to 'pip_list.txt'.
 - **getpixlist**: Creates a list of packages installed via pipx, saving to 'pix_list.txt'.
@@ -35,6 +36,7 @@ The files linux_packs_needed.txt and pip_needed.txt contain lists of pip or apt 
 - **updatepips**: Upgrades all installed pip packages and logs any errors.
 
 ## Search and File Tools
+
 - **comparef**: Compares files between two folders, identifying unique and common files while ignoring specific directories (like .git and .trash). Provides colorful output for easy visualization.
 - **dupl**: Bash script to remove duplicates from a file while preserving order.
 - **loc**: Bash script to search for files in a directory using the `locate` command.
@@ -44,11 +46,11 @@ The files linux_packs_needed.txt and pip_needed.txt contain lists of pip or apt 
 - **search**: Bash script for flexible file and folder searching with various options.
 - **swd**: Python script to search for text in files within a directory, with regex support.
 - **swf**: Python script to search for a word or pattern in a file, displaying line numbers.
-- **txtf**: Bash script to find specific types of sensitive files in a target directory.
 - **list**: Creates a file list from a specified directory, with recursive options and exclusions.
 - **compr**: Versatile compression/decompression tool supporting various formats (7z, gzip, bzip2, xz, zstd, zip, rar, lz4, tar).
 
 ## Subtitle Management Tools
+
 - **movef**: Moves files from subdirectories to a destination directory.
 - **trf**: Translates text files (including subtitles) from English to Hebrew using various translation services, including AI models.
 - **trsub**: Downloads subtitles using subliminal and translates them for multiple video files in a folder (using scripts: trf, vidsubs).
@@ -60,6 +62,7 @@ The files linux_packs_needed.txt and pip_needed.txt contain lists of pip or apt 
 - **vidlsub**: Downloads any video from website and transcribes it (using script: whis).
 
 ## System Management Scripts
+
 - **active**: Checks if a specified process is running.
 - **clean**: Cleans up unused packages and dependencies.
 - **heat**: Monitors system temperatures, calculating averages for CPU, GPU, package, and NVMe.
