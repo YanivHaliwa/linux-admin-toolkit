@@ -1,6 +1,6 @@
-# System Management Scripts
+# System Management
 
-For details on each script, see the [System Management Scripts section in the main README](https://github.com/YanivHaliwa/Linux-Stuff/tree/master?tab=readme-ov-file#system-management-scripts).
+For details on each script, see the [System Management section in the main README](https://github.com/YanivHaliwa/linux-admin-toolkit#-system-management).
 
 ## Author
 

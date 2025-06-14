@@ -34,7 +34,7 @@ chmod +x battery-management/* system-info/* package-management/* system-manageme
 - **Python packages**: `ast`, `importlib.metadata`, `stdlib_list`, `Xlib`
 - **Optional**: `lsd` (enhanced ls), `batcat` (syntax highlighting)
 
-## � Battery Management
+## Battery Management
 
 Advanced battery monitoring and analysis tools for laptop users and system administrators.
 
