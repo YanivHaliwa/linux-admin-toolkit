@@ -12,15 +12,15 @@ action=$2
 
 # Function to enable and start a service
 enable_start_service() {
-    echo '314674' | sudo -S  systemctl enable "$service_name"
-    echo '314674' | sudo -S  systemctl start "$service_name"
+    sudo systemctl enable "$service_name"
+    sudo systemctl start "$service_name"
     echo "Service $service_name has been enabled and started."
 }
 
 # Function to disable and stop a service
 disable_stop_service() {
-    echo '314674' | sudo -S  systemctl stop "$service_name"
-    echo '314674' | sudo -S  systemctl disable "$service_name"
+    sudo systemctl stop "$service_name"
+    sudo systemctl disable "$service_name"
     echo "Service $service_name has been stopped and disabled."
 }
 

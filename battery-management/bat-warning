@@ -5,6 +5,9 @@ export XAUTHORITY=$HOME/.Xauthority
 export DBUS_SESSION_BUS_ADDRESS=unix:path=/run/user/1000/bus
 export PULSE_SERVER=/run/user/1000/pulse/native
 
+# Get script directory for relative audio paths
+SCRIPT_DIR="$(dirname "$0")"
+
 # Set the threshold for low battery level
 THRESHOLD=25
 CHARGED=100
@@ -25,12 +28,12 @@ CHARGING_STATUS=$(acpi -b | grep -o 'Charging\|Discharging')
 
 if [ "$BATTERY_LEVEL" -le "$THRESHOLD" ] && [ "$CHARGING_STATUS" == "Discharging" ]; then
     rm -f "$FLAG_FILE"
-    /bin/mpg123 $HOME/tools/charge_now.mp3
+    /bin/mpg123 "$SCRIPT_DIR/charge_now.mp3"
     /bin/notify-send "Low Battery" "Your battery is at $BATTERY_LEVEL%. Please plug in your charger." --icon=dialog-warning  
 fi
 
 if [ "$BATTERY_LEVEL" -eq "$CHARGED" ] && [ ! -f "$FLAG_FILE" ]; then
-    /bin/mpg123 $HOME/tools/battery_full.mp3  ## CHANGE TO ANY AUDIO YOU WANT
+    /bin/mpg123 "$SCRIPT_DIR/battery_full.mp3"  ## CHANGE TO ANY AUDIO YOU WANT
     /bin/notify-send "Battery Full" "Battery is fully charged. You can unplug the charger." --icon=dialog-warning
     touch "$FLAG_FILE"
 elif [ "$BATTERY_LEVEL" -ne "$CHARGED" ]; then

@@ -1,6 +1,6 @@
 #!/bin/bash
 
-echo "314674" | sudo -S airmon-ng stop wlan0mon > /dev/null 2>&1
+sudo airmon-ng stop wlan0mon > /dev/null 2>&1
 sudo airmon-ng stop wlan0 > /dev/null 2>&1
 
 interface_name=$(ip -o link show | grep -E 'wlan0|wlan0mon' | awk '{print $2}' | tr -d ':')

@@ -1,5 +1,0 @@
-#!/bin/bash
-pip3 freeze > pip_packages.txt 
-cut -d'=' -f1 pip_packages.txt > pip_packages_list.txt
-rm pip_packages.txt
-mv pip_packages_list.txt pip_list.txt

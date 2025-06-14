@@ -1,5 +1,0 @@
-#!/bin/bash
-pipx list --short > installed_packages.txt 
-awk '{print $1}' installed_packages.txt > cleaned_names.txt 
-rm installed_packages.txt
-mv cleaned_names.txt pix_list.txt

@@ -1,9 +1,0 @@
-#!/bin/bash
-pack_file="$1"
-while read -r package; do
-  package_name="${package%%=*}"
-  if [ -n "$package_name" ]; then
-    pipx uninstall "$package_name" 
-  fi
-done < "$pack_file"
- 
