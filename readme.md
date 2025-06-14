@@ -1,65 +1,96 @@
-# System Management and Utilities Linux
+# Linux System Management Suite
 
-Welcome to my collection of simple yet powerful Linux tools! These are just everyday scripts and commands I've put together to make life easier when working with Linux. Whether you're managing your system, handling files, or doing some network stuff, you'll find something here to save you time and effort.
+#version 14.6.25
 
-Think of these as your handy toolbox for common Linux tasks. They're not fancy – just practical. I use these regularly to simplify my workflow, and I hope they'll do the same for you.
+A comprehensive collection of Linux system administration tools and utilities focused on battery management, system information, package management, and system maintenance. This suite provides essential tools for day-to-day Linux system operations and monitoring.
 
-The files linux_packs_needed.txt and pip_needed.txt contain lists of pip or apt packages needed for some files to work.
+## 🚀 Features
 
-## Battery Management
+- **Battery Management** - Monitor, analyze, and get notifications for battery status
+- **System Information** - Comprehensive system analysis and reporting tools  
+- **Package Management** - Advanced package installation, tracking, and dependency management
+- **System Maintenance** - Process management, network tools, and system cleanup utilities
 
-- **batcon**: Analyzes battery discharge patterns and estimates remaining battery time.
-- **batlow**: Monitors battery level and sends notifications for low battery or full charge.
-- **batstat**: Logs battery state changes (charging/discharging) with timestamps.
+## 📋 Prerequisites
 
-## Info
+```bash
+# Clone the repository
+git clone https://github.com/YanivHaliwa/Linux-Stuff.git
+cd Linux-Stuff
 
-- **aptsi**: Search installed packages, optionally filter for manually installed ones.
-- **bati**: Display binary file contents using bat.
-- **cati**: Display binary file contents using cat.
-- **fil**: Comprehensive file examination tool (type, hashes, content preview, etc.).
-- **fiup**: Find files modified within a specified time frame.
-- **lf**: List files or directories using lsd.
-- **myusers**: Display user account information.
-- **sysinfo**: Show system information (hostname, ID, version, etc.).
+# Install required packages
+sudo apt update
+sudo apt install -f < linux_packs_needed.txt
+pip install -r pip_needed.txt
 
-## Package Management
+# Make scripts executable
+chmod +x battery_managment/* info/* package_managment/* system-management-scripts/*
+```
 
-- **aptf**: Installs packages listed in a specified file.
-- **getpiplist**: Generates a clean list of installed pip packages, saving to 'pip_list.txt'.
-- **getpixlist**: Creates a list of packages installed via pipx, saving to 'pix_list.txt'.
-- **installdeb**: Installs `.deb` packages using `dpkg` and resolves dependencies.
-- **pix**: Installs a Python package using pipx with dependencies.
-- **pixfile-i**: Installs multiple Python packages from a file using pipx.
-- **pixfile-u**: Uninstalls multiple Python packages from a file using pipx.
-- **reqs**: Analyzes Python files to generate a requirements.txt file, identifying external dependencies.
-- **updatepips**: Upgrades all installed pip packages and logs any errors.
+## 🛠️ Tools Overview
 
-## Search and File Tools
+### Battery Management
 
-- **comparef**: Compares files between two folders, identifying unique and common files while ignoring specific directories (like .git and .trash). Provides colorful output for easy visualization.
-- **dupl**: Bash script to remove duplicates from a file while preserving order.
-- **loc**: Bash script to search for files in a directory using the `locate` command.
-- **psearch**: Bash script to search for packages in the APT cache, with optional installed package filtering.
-- **readqr**: Reads and decodes QR codes from image files using a barcode recognition API.
-- **reversefile**: Reverses Hebrew text in a given file, creating a new file with reversed content.
-- **search**: Bash script for flexible file and folder searching with various options.
-- **swd**: Python script to search for text in files within a directory, with regex support.
-- **swf**: Python script to search for a word or pattern in a file, displaying line numbers.
-- **list**: Creates a file list from a specified directory, with recursive options and exclusions.
-- **compr**: Versatile compression/decompression tool supporting various formats (7z, gzip, bzip2, xz, zstd, zip, rar, lz4, tar).
+#### `batcon` - Battery Analysis Tool
+Analyzes battery discharge patterns and estimates remaining battery time with historical data.
 
-## Subtitle Management Tools
+#### `batlow` - Battery Monitor & Notifications  
+Monitors battery level and sends desktop notifications for low battery warnings and full charge alerts.
 
-- **movef**: Moves files from subdirectories to a destination directory.
-- **trf**: Translates text files (including subtitles) from English to Hebrew using various translation services, including AI models.
-- **trsub**: Downloads subtitles using subliminal and translates them for multiple video files in a folder (using scripts: trf, vidsubs).
-- **trw**: Translates words or phrases from English to Hebrew using multiple translation services, including AI models.
-- **vidsubs**: Matches video files with their corresponding subtitle files and renames them for consistency.
-- **whis**: Transcribes audio files using OpenAI's Whisper model with optional GPT enhancement.
-- **whisi**: Transcribes audio using various Whisper models, including Ivrit-AI and faster-whisper versions.
-- **vidl**: Downloads any video from website.
-- **vidlsub**: Downloads any video from website and transcribes it (using script: whis).
+#### `batstat` - Battery State Logger
+Logs battery state changes (charging/discharging) with timestamps for analysis and tracking.
+
+### System Information
+
+#### `aptsi` - Package Search Tool
+Search installed packages with optional filtering for manually installed packages vs. dependencies.
+
+#### `bati` - Binary File Viewer (bat)
+Display binary file contents using the bat command with syntax highlighting and formatting.
+
+#### `cati` - Binary File Viewer (cat)
+Display binary file contents using cat for quick inspection and analysis.
+
+#### `fil` - Comprehensive File Analyzer
+Multi-purpose file examination tool providing file type, hashes, content preview, and metadata analysis.
+
+#### `fiup` - Recent File Finder
+Find and list files modified within a specified time frame for change tracking.
+
+#### `lf` - Enhanced Directory Listing
+List files and directories using lsd with improved formatting and icons.
+
+#### `myusers` - User Account Information
+Display comprehensive user account information and system user details.
+
+#### `sysinfo` - System Information Reporter
+Show detailed system information including hostname, system ID, version, and hardware details.
+
+### Package Management
+
+#### `aptf` - Package File Installer
+Installs packages listed in a specified file, useful for batch package installation.
+
+#### `getpiplist` - Pip Package Lister
+Generates a clean list of installed pip packages, saving results to 'pip_list.txt' for backup or replication.
+
+#### `getpixlist` - Pipx Package Lister  
+Creates a list of packages installed via pipx, saving to 'pix_list.txt' for environment documentation.
+
+#### `installdeb` - DEB Package Installer
+Installs `.deb` packages using `dpkg` and automatically resolves dependencies with apt.
+
+#### `pixfile-i` - Batch Pipx Installer
+Installs multiple Python packages from a requirements file using pipx for isolated environments.
+
+#### `pixfile-u` - Batch Pipx Uninstaller
+Uninstalls multiple Python packages from a file using pipx for clean environment management.
+
+#### `reqs` - Requirements Generator
+Analyzes Python files to generate requirements.txt, automatically identifying external dependencies.
+
+#### `updatepips` - Pip Upgrade Manager
+Upgrades all installed pip packages with error logging and dependency conflict resolution.
 
 ## System Management Scripts
 
