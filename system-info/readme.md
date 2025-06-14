@@ -1,6 +1,6 @@
-# System Information Tools
+# Info
 
-For details on each script, see the [System Information Tools section in the main README](https://github.com/YanivHaliwa/linux-admin-toolkit#-system-information-tools).
+For details on each script, see the [Info section in the main README](https://github.com/YanivHaliwa/Linux-Stuff/tree/master?tab=readme-ov-file#Info).
 
 ## Author
 
