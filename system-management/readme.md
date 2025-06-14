@@ -1,6 +1,6 @@
 # System Management
 
-For details on each script, see the [System Management section in the main README](https://github.com/YanivHaliwa/linux-admin-toolkit#-system-management).
+For details on each script, see the [System Management section in the main README](https://github.com/YanivHaliwa/linux-admin-toolkit#%EF%B8%8F-system-management).
 
 ## Author
 
