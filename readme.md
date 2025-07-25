@@ -1,6 +1,6 @@
 # Linux System Management Suite
 
-#version 14.6.25
+#version 25.7.25
 
 A comprehensive collection of Linux system administration tools and utilities designed for system administrators, cybersecurity professionals, and power users. This suite provides essential tools for battery management, system information gathering, package management, and advanced system maintenance operations.
 
