@@ -15,8 +15,8 @@ A comprehensive collection of Linux system administration tools and utilities de
 
 ```bash
 # Clone the repository
-git clone https://github.com/YanivHaliwa/Linux-fix.git
-cd Linux-fix
+git clone https://github.com/YanivHaliwa/linux-admin-toolkit.git
+cd linux-admin-toolkit
 
 # Install required system packages
 sudo apt update
