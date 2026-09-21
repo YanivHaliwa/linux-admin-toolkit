@@ -17,4 +17,6 @@ sudo systemctl restart NetworkManager
 sudo systemctl restart networking
 sudo systemctl restart systemd-resolved 
 sudo systemctl restart cloudflared
+sudo systemctl restart systemd-resolved.service
+
 
